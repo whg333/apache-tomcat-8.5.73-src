@@ -1,5 +1,9 @@
 ## Welcome to Apache Tomcat!
 
+### 可导入IDEA运行(添加了pom.xml和中文支持)
+
+参考链接：[IDEA运行Tomcat8.5.73源码](https://blog.csdn.net/m0_37564426/article/details/121817722)
+
 ### What Is It?
 
 The Apache Tomcat® software is an open source implementation of the Java
