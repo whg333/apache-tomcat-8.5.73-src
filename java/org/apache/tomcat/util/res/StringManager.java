@@ -16,6 +16,7 @@
  */
 package org.apache.tomcat.util.res;
 
+import java.nio.charset.StandardCharsets;
 import java.text.MessageFormat;
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -166,6 +167,9 @@ public class StringManager {
         if (value == null) {
             value = key;
         }
+
+        //解决中文乱码
+        value = new String(value.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
 
         MessageFormat mf = new MessageFormat(value);
         mf.setLocale(locale);
